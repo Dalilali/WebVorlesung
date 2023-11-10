@@ -7,11 +7,14 @@
     <title>Contries</title>
 
     <style>
-        .container{
+        
+        .container {
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            color:black;
+            color: black;
             background-color: #e9ede4;
+            
         }
+
         .col {
             border: 10px solid #e9ede4;
             background-color: lightblue;
@@ -21,44 +24,60 @@
             padding-left: 80px;
             border-radius: 20%;
         }
+        .col:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+        }
 
 
         #allcountry {
             padding-left: 3px;
             padding-right: 3px;
+            
 
         }
 
 
         .detail {
-            
+
             text-align: left;
+            
         }
 
-        .europe {
+        .Europe {
             background-color: rgb(234, 249, 232);
         }
 
-        .africa {
+        .Africa {
             background-color: rgb(214, 208, 197);
 
 
         }
 
-        .asia {
+        .Asia {
             background-color: rgb(249, 250, 240);
         }
 
-        .amerika {
+        .Americas {
             background-color: rgb(225, 227, 255);
         }
 
-        .oceania {
+        .Oceania {
             background-color: rgb(212, 255, 255);
         }
 
         .container {
             padding-top: 30px;
+        }
+
+        .worldmap{
+            position: fixed;
+            width: 100%;
+            opacity: 80%;
+            z-index: -1;
+        }
+        nav{
+            position:static;
         }
     </style>
 
@@ -73,55 +92,16 @@
 
 <body>
 
-    <!-- Hier Beginnt der NavBar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" onclick="chco()">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
+    <img src="img/world-map.gif" alt="" class="worldmap">
     <!-- Haupt Container-->
-    <div class="container container1">
+    <div class="container">
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" onclick="chco()">Search</button>
         </form>
+        <div>
+            <h3>Menu</h3>
+        </div>
 
 
 
@@ -131,9 +111,8 @@
                 <div class="col">
                     <h1></h1>
                     <ul class="detail">
-                    </ul>Anscheind gibts ein Fehler
+                    </ul>Es lädt...
                 </div>
-
             </div>
         </div>
     </div>
