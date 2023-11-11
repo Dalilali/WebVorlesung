@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "openfoodfacts-nodejs": "^0.1.0"
   },
   "name": "webvorlesung",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
