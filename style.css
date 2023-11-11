@@ -1,0 +1,91 @@
+.container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    color: black;
+    background-color: #e9ede4;
+
+}
+
+.col {
+    border: 10px solid #e9ede4;
+    background-color: lightblue;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    border-radius: 20%;
+}
+
+.col:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+
+#allcountry {
+    padding-left: 3px;
+    padding-right: 3px;
+
+
+}
+
+
+.detail {
+
+    text-align: left;
+
+}
+
+.Europe {
+    background-color: rgb(234, 249, 232);
+}
+
+.Africa {
+    background-color: rgb(214, 208, 197);
+
+
+}
+
+.Asia {
+    background-color: rgb(249, 250, 240);
+}
+
+.Americas {
+    background-color: rgb(225, 227, 255);
+}
+
+.Oceania {
+    background-color: rgb(212, 255, 255);
+}
+
+.container {
+    padding-top: 30px;
+}
+
+.worldmap {
+    position: fixed;
+    width: 100%;
+    opacity: 80%;
+    z-index: -1;
+}
+
+.nav {
+    position: relative;
+    margin-left: 20px;
+}
+.nav a {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+.nav a:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+a img {
+    width: 20px; /* Ändere die Breite nach Bedarf */
+    height: 20px; /* Ändere die Höhe nach Bedarf */
+    padding-bottom: 1px;
+}
+.iconraw {
+    padding-left:100px; ;
+}
