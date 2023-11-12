@@ -1,16 +1,17 @@
 main();
 
 window.addEventListener("load", event => {
-    
-       
-    
+
+
+
 })
 
-async function main(){
+async function main() {
     await fetchDataFromAPI();
     addContinentToButton();
     searchBtnEvent();
-    
+
+
 }
 
 var continents = [];
@@ -63,15 +64,15 @@ function generateContryTemplate(country) {
     detailList.classList.add('detail');
 
     var regionItem = document.createElement('li');
-    regionItem.innerHTML = 'Region: ' + country.region;
+    regionItem.innerHTML = 'Continent: ' + country.region;
     detailList.appendChild(regionItem);
 
     var capitalItem = document.createElement('li');
-    capitalItem.innerHTML = 'Hauptstadt: ' + country.capital;
+    capitalItem.innerHTML = 'Capital: ' + country.capital;
     detailList.appendChild(capitalItem);
 
     var populationItem = document.createElement('li');
-    populationItem.innerHTML = 'Bevölkerung: ' + country.population;
+    populationItem.innerHTML = 'Population: ' + country.population;
     detailList.appendChild(populationItem);
 
     if (country.languages) {
@@ -156,8 +157,17 @@ function addContinentToButton() {
     }
 }
 
+var independent = document.getElementById('inlineCheckbox1');
+var isIndependent = independent.checked;
+
+var un = document.getElementById('inlineCheckbox2');
+var isUnMember = un.checked;
+
+var landlocked = document.getElementById('inlineCheckbox3');
+var isLandlocked = landlocked.checked;
+
 function getSelectedOption() {
-    
+
     var selectElement = document.getElementById("continent-selector");
 
     var selectedvalue = selectElement.value;
@@ -165,14 +175,15 @@ function getSelectedOption() {
     // Log or use the selected value and text
     console.log("Selected Text:", selectedvalue);
     return selectedvalue;
-  }
+}
+
 
 async function getCountryByContinent(continent) {
-    if(continent== "all"){
+    if (continent == "all") {
         return fetchDataFromAPI();
     }
     try {
-        const apiurl2 = "https://restcountries.com/v3.1/region/" +continent;
+        const apiurl2 = "https://restcountries.com/v3.1/region/" + continent;
         const response2 = await fetch(apiurl2);
 
         if (!response2.ok) {
@@ -184,10 +195,11 @@ async function getCountryByContinent(continent) {
         let count2 = 0
         let sortedData2 = Object.values(data2).sort((a, b) => a.name.common.localeCompare(b.name.common));
         if (data2) {
-            document.getElementById("allcountry").innerHTML= "";
+            document.getElementById("allcountry").innerHTML = "";
             for (x in sortedData2) {
                 let country = sortedData2[x];
                 if (country.region == continent) {
+
                     count2++;
                     document.getElementById("allcountry").appendChild(generateContryTemplate(country));
                 }

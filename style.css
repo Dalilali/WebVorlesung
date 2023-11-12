@@ -4,6 +4,11 @@ body {
     padding: 0;
 }
 
+h1{
+    text-align: center;
+    font-weight: 2000;
+}
+
 .container-xxl {
     color: black;
     background-color: #e9ede4;
@@ -90,9 +95,7 @@ body {
 
 a img {
     width: 20px;
-    /* Ändere die Breite nach Bedarf */
     height: 20px;
-    /* Ändere die Höhe nach Bedarf */
     padding-bottom: 1px;
 }
 
@@ -105,17 +108,12 @@ a img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 2%;
-    padding-bottom: 2%;
 
 }
 
 hr.rounded {
     border-top: 8px solid #bbb;
     border-radius: 3px;
-}
-
-.filter-box {
-    
 }
