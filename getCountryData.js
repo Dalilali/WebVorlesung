@@ -1,19 +1,9 @@
 main();
-
-window.addEventListener("load", event => {
-
-
-
-})
-
 async function main() {
     await fetchDataFromAPI();
     addContinentToButton();
     searchBtnEvent();
-
-
 }
-
 var continents = [];
 
 async function fetchDataFromAPI() {
