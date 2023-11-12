@@ -20,19 +20,43 @@
 
     <img src="img/world-map.gif" alt="" class="worldmap">
     <!-- Haupt Container-->
-    <div class="container">
-        <form class="d-flex" role="search" id ="searchForm">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-            <button class="btn btn-outline-success">Search</button>
-        </form>
-        <div>
-            <h3>Menu</h3>
-        </div>
+    <div class="container-xxl">
+        <header>
+            <form class="d-flex" role="search" id="searchForm">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    id="searchInput">
+                <button class="btn btn-outline-success">Search</button>
+            </form>
+            <div class="filter-box">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">independent State</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">UN-Member</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">landlocked</label>
+                </div>
+                <hr>
+                <select class="form-select" aria-label="Default select example" id="continent-selector">
+                    <option value="all" selected>Select a continent</option>
+
+                </select>
+                <hr>
+                <button type="button" class="btn btn-primary" onclick="getCountryByContinent(getSelectedOption())">Primary</button>
+
+            </div>
 
 
+        </header>
 
-        <div class="container text-center">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4" id="allcountry">
+        <hr class="rounded">
+
+        <main class="container text-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4" id="allcountry">
                 <!-- 
                     ********************************************
                     *                                          *
@@ -45,11 +69,11 @@
                     *                                          *
                     ********************************************
                  -->
-                
+
             </div>
-        </div>
+        </main>
     </div>
-    <script src="getCountryData.js" onloadstart="fetchDataFromAPI()">
+    <script src="getCountryData.js">
     </script>
 </body>
 

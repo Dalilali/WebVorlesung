@@ -1,8 +1,17 @@
-.container {
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-xxl {
     color: black;
     background-color: #e9ede4;
 
+}
+
+#searchForm {
+    padding-top: 1%;
 }
 
 .col {
@@ -13,6 +22,8 @@
     padding-bottom: 50px;
     padding-left: 80px;
     border-radius: 20%;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .col:hover {
@@ -20,19 +31,14 @@
     cursor: pointer;
 }
 
-
 #allcountry {
     padding-left: 3px;
     padding-right: 3px;
-
-
 }
 
-
 .detail {
-
+    margin-top: 10%;
     text-align: left;
-
 }
 
 .Europe {
@@ -41,8 +47,6 @@
 
 .Africa {
     background-color: rgb(214, 208, 197);
-
-
 }
 
 .Asia {
@@ -72,20 +76,46 @@
     position: relative;
     margin-left: 20px;
 }
+
 .nav a {
     position: relative;
     margin-left: 5px;
     margin-right: 3px;
 }
+
 .nav a:hover {
     transform: scale(1.4);
     cursor: pointer;
 }
+
 a img {
-    width: 20px; /* Ändere die Breite nach Bedarf */
-    height: 20px; /* Ändere die Höhe nach Bedarf */
+    width: 20px;
+    /* Ändere die Breite nach Bedarf */
+    height: 20px;
+    /* Ändere die Höhe nach Bedarf */
     padding-bottom: 1px;
 }
+
 .iconraw {
-    padding-left:100px; ;
+    padding-left: 100px;
+    ;
+}
+
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+
+}
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 3px;
+}
+
+.filter-box {
+    
 }
